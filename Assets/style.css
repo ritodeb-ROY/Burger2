@@ -1,0 +1,558 @@
+/* =============================================== */
+/* BURGER HUB - STYLE.CSS
+/* Premium Flame-Grilled Burgers Website
+/* =============================================== */
+
+/* ---------- GLOBAL RESET & VARIABLES ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0A0A0A;
+  color: #F5F5F5;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+:root {
+  --primary: #FF5E3A;
+  --primary-dark: #E0441E;
+  --secondary: #FFB347;
+  --dark-card: #111111;
+  --glass: rgba(20, 20, 20, 0.85);
+}
+
+/* ---------- UTILITY CLASSES ---------- */
+.text-grad {
+  background: linear-gradient(120deg, #FFB347, #FF5E3A);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.btn-accent {
+  background: #FF5E3A;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 18px rgba(255, 94, 58, 0.3);
+  color: white;
+}
+
+.btn-accent:hover {
+  background: #FFB347;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 22px rgba(255, 94, 58, 0.4);
+}
+
+.bg-accent-gradient {
+  background: radial-gradient(circle at 20% 30%, #1c100b, #000000);
+}
+
+/* ---------- SCROLL PROGRESS BAR ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #FF5E3A, #FFB347);
+  z-index: 1050;
+  transition: width 0.2s ease;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  background: rgba(0, 0, 0, 0.92) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 94, 58, 0.25);
+  padding: 0.8rem 2rem;
+  transition: all 0.3s;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #FFB347, #FF5E3A);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav-link {
+  color: #ddd !important;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  transition: 0.25s;
+  font-size: 0.9rem;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #FF5E3A !important;
+}
+
+.btn-outline-accent {
+  border: 2px solid #FF5E3A;
+  background: transparent;
+  color: #FF5E3A;
+  border-radius: 40px;
+  padding: 0.4rem 1.2rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-outline-accent:hover {
+  background: #FF5E3A;
+  color: white;
+  transform: scale(0.98);
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+  background: radial-gradient(circle at 10% 30%, #121212, #020202);
+}
+
+.hero-img-wrapper {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero-img-wrapper img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 50%;
+  border: 5px solid #FF5E3A;
+  transition: transform 0.4s;
+}
+
+.hero-img-wrapper:hover img {
+  transform: scale(1.05);
+  border-color: #FFB347;
+}
+
+/* ---------- CHEF CARDS ---------- */
+.chef-card {
+  background: #111111;
+  border-radius: 32px;
+  padding: 1.5rem;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 94, 58, 0.2);
+  height: 100%;
+}
+
+.chef-card:hover {
+  transform: translateY(-12px);
+  border-color: #FF5E3A;
+  box-shadow: 0 20px 35px rgba(255, 94, 58, 0.15);
+}
+
+.chef-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+  border: 3px solid #FF5E3A;
+  transition: all 0.4s;
+}
+
+.chef-card:hover .chef-img {
+  transform: scale(1.05);
+  border-color: #FFB347;
+}
+
+/* ---------- SWIPER SLIDER ---------- */
+.swiper {
+  padding: 20px 0 40px;
+}
+
+.swiper-slide {
+  background: #111;
+  border-radius: 40px;
+  padding: 1.8rem 1rem;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.swiper-slide:hover {
+  background: #1a1a1a;
+  transform: translateY(-5px);
+}
+
+.burger-slide-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #FF5E3A;
+  transition: all 0.3s ease;
+}
+
+.swiper-slide:hover .burger-slide-img {
+  transform: scale(1.05);
+  border-color: #FFB347;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #FF5E3A !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FF5E3A !important;
+}
+
+/* ---------- STATISTICS CARDS ---------- */
+.stat-card {
+  background: rgba(255, 255, 240, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 48px;
+  padding: 1.8rem;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.stat-card:hover {
+  background: rgba(255, 94, 58, 0.2);
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+/* ---------- PACKAGE CARDS ---------- */
+.package-card {
+  background: #121212;
+  border-radius: 44px;
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: all 0.3s;
+  border: 1px solid #2a2a2a;
+}
+
+.package-card:hover {
+  border-color: #FF5E3A;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+.package-card .fs-1 {
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover .fs-1 {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* ---------- TESTIMONIAL ---------- */
+.testimonial-card {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 64px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.02);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.testimonial-card img {
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ---------- NEWSLETTER ---------- */
+.newsletter {
+  background: linear-gradient(135deg, #0f0c0a, #1e110b);
+}
+
+.newsletter .form-control {
+  background: white;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 500;
+}
+
+.newsletter .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(255, 94, 58, 0.3);
+  outline: none;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: #030303;
+  border-top: 1px solid #222;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #aaa;
+  transition: 0.2s;
+}
+
+.footer a:hover {
+  color: #FF5E3A;
+  padding-left: 5px;
+}
+
+.footer h6 {
+  color: #FFB347;
+  margin-bottom: 1rem;
+}
+
+/* ---------- CHAT WIDGET ---------- */
+.chat-widget {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1100;
+}
+
+.chat-toggle-btn {
+  background: #FF5E3A;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.chat-toggle-btn:hover {
+  transform: scale(1.08);
+  background: #FFB347;
+}
+
+.chat-box {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  width: 340px;
+  background: #151515;
+  border-radius: 28px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  border: 1px solid #FF5E3A;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+}
+
+.chat-header {
+  background: #FF5E3A;
+  padding: 12px 18px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-msgs {
+  height: 280px;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bot-msg, .user-msg {
+  max-width: 85%;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  word-wrap: break-word;
+}
+
+.bot-msg {
+  background: #2c2c2c;
+  color: #FFD9A5;
+  align-self: flex-start;
+}
+
+.user-msg {
+  background: #FF5E3A;
+  align-self: flex-end;
+  color: white;
+}
+
+.chat-input-area {
+  display: flex;
+  border-top: 1px solid #2a2a2a;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 12px;
+  background: #0a0a0a;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+.chat-input-area input::placeholder {
+  color: #666;
+}
+
+.chat-input-area button {
+  background: #FF5E3A;
+  border: none;
+  padding: 0 18px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input-area button:hover {
+  background: #FFB347;
+}
+
+/* ---------- CUSTOM TOAST ---------- */
+.toast-custom {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  background: linear-gradient(95deg, #FF5E3A, #FFB347);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 60px;
+  font-weight: 600;
+  z-index: 1200;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+  opacity: 0;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .hero-img-wrapper img {
+    max-width: 260px;
+  }
+  
+  .chat-box {
+    width: 85vw;
+    right: -10px;
+  }
+  
+  .navbar {
+    padding: 0.6rem 1rem;
+  }
+  
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  
+  .display-5 {
+    font-size: 1.8rem;
+  }
+  
+  .chef-img {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .burger-slide-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .testimonial-card {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-accent {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .package-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .chat-toggle-btn {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .toast-custom {
+    bottom: 80px;
+    right: 10px;
+    left: 10px;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+
+/* ---------- SCROLLBAR CUSTOMIZATION ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF5E3A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFB347;
+}

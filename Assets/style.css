@@ -556,3 +556,78 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #FFB347;
 }
+/* ---------- FOOTER SOCIAL ICONS ---------- */
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background: #111;
+  color: #FF5E3A;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 94, 58, 0.3);
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #FF5E3A;
+  color: #fff;
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 10px 20px rgba(255, 94, 58, 0.35);
+}
+/* ========================================= */
+/* BURGER HIGHLIGHT SECTION */
+/* ========================================= */
+
+.burger-highlight-section {
+  overflow: hidden;
+}
+
+.burger-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-circle-img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #FFB347;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+  transition: all 0.4s ease;
+}
+
+.burger-circle-img:hover {
+  transform: scale(1.05);
+  border-color: #FF5E3A;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .burger-circle-img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .burger-highlight-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  .burger-highlight-section p {
+    text-align: center;
+  }
+
+  .burger-highlight-section .btn-accent {
+    display: block;
+    margin: 20px auto 0;
+  }
+}
